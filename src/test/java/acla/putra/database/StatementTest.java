@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.SQLException;
+import java.sql.ResultSet;
 
 public class StatementTest
 {
@@ -25,7 +26,7 @@ public class StatementTest
 
     String sql = """
       INSERT INTO customers(id, name, email)
-      VALUES ('nano', 'Nano', 'nano@test.com')
+      VALUES ('mika', 'Mika', 'mika@test.com')
       """;
     int update = statement.executeUpdate(sql);
     System.out.println(update);
@@ -49,4 +50,20 @@ public class StatementTest
     statement.close();
     connection.close();
   } 
+
+  @Test
+  void testExecuteQuery() throws SQLException {
+    Connection connection = ConnectionUtil.getDataSource().getConnection();
+
+    Statement statement = connection.createStatement();
+
+    String sql = """
+        SELECT * FROM customers;
+      """;
+    ResultSet resultSet = statement.executeQuery(sql);
+
+    resultSet.close();
+    statement.close();
+    connection.close();
+  }
 }
