@@ -1,2 +1,2 @@
 # java-jdbc
-Learn Java Database JDBC to MySQL
+Learn Mysql CJ JDBC Driver for database and JUnit Jupiter for testing purposes.
