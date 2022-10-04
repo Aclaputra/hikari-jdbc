@@ -13,3 +13,6 @@ execute specific Test Method :
 ```bash
 mvn test -Dtest="StatementTest#testExecuteDelete"
 ```
+
+References :
+- javadoc java.sql.ResultSet => https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html
