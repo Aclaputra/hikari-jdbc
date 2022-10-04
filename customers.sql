@@ -5,3 +5,5 @@ CREATE TABLE customers (
   CONSTRAINT email_unique UNIQUE (email),
   PRIMARY KEY (id)
 ) ENGINE = InnoDB;
+
+SELECT * FROM customers;
