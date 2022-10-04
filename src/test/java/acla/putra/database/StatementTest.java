@@ -25,7 +25,7 @@ public class StatementTest
 
     String sql = """
       INSERT INTO customers(id, name, email)
-      VALUES ('acla', 'Acla', 'acla@test.com')
+      VALUES ('nano', 'Nano', 'nano@test.com')
       """;
     int update = statement.executeUpdate(sql);
     System.out.println(update);
@@ -33,4 +33,20 @@ public class StatementTest
     statement.close();
     connection.close();
   }
+
+  @Test
+  void testExecuteDelete() throws SQLException {
+    Connection connection = ConnectionUtil.getDataSource().getConnection();
+
+    Statement statement = connection.createStatement();
+
+    String sql = """
+        DELETE FROM customers;
+      """;
+    int update = statement.executeUpdate(sql);
+    System.out.println(update);
+
+    statement.close();
+    connection.close();
+  } 
 }
