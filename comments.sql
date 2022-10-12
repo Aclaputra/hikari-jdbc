@@ -10,3 +10,5 @@ SELECT * FROM comments;
 SELECT COUNT(id) FROM comments;
 
 -- DELETE FROM comments;
+
+SELECT * FROM comments;
