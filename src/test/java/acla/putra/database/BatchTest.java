@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 
 public class BatchTest
 {
+  /** 
   @Test
   void testStatement() throws SQLException {
     Connection connection = ConnectionUtil.getDataSource().getConnection();
@@ -44,4 +45,5 @@ public class BatchTest
     preparedStatement.close();
     connection.close();
   }
+  */
 }
