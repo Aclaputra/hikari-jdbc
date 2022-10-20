@@ -13,7 +13,7 @@ public class TransactionTest
     Connection connection = ConnectionUtil.getDataSource().getConnection();
     connection.setAutoCommit(false);
 
-    String sql = "INSERT INTO comments(email, comment) VALUES (?, ?)":
+    String sql = "INSERT INTO comments(email, comment) VALUES (?, ?)";
     for (int i = 0; i < 100; i++)
     {
       PreparedStatement preparedStatement = connection.prepareStatement(sql);
