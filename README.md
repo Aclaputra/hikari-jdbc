@@ -1,4 +1,6 @@
-# java-jdbc
+# hikari cp jdbc
+![](https://raw.githubusercontent.com/wiki/brettwooldridge/HikariCP/Hikari.png)
+
 Learn Mysql CJ JDBC Driver for database, HikariCP for Connection Pool & JUnit Jupiter for testing purposes.
 
 Requirements :
